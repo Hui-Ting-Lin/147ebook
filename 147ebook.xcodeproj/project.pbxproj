@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B00787C253B0C3E002049E5 /* albumData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B00787B253B0C3E002049E5 /* albumData.swift */; };
+		3B007880253B0CFE002049E5 /* memberData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B00787F253B0CFE002049E5 /* memberData.swift */; };
 		3B4A504C253994CB0068BF15 /* memberRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A504B253994CB0068BF15 /* memberRow.swift */; };
 		3B4A5054253995060068BF15 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A5053253995060068BF15 /* Member.swift */; };
 		3B4A505825399D5D0068BF15 /* memberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A505725399D5D0068BF15 /* memberView.swift */; };
 		3B4A505C2539A2660068BF15 /* memberDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4A505B2539A2660068BF15 /* memberDetail.swift */; };
+		3B824F4F253AC1D300C36F0A /* photoWallsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B824F4E253AC1D300C36F0A /* photoWallsView.swift */; };
 		3B9DFE982539672700ECA93A /* _47ebookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DFE972539672700ECA93A /* _47ebookApp.swift */; };
 		3B9DFE9A2539672700ECA93A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DFE992539672700ECA93A /* ContentView.swift */; };
 		3B9DFE9C2539672900ECA93A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B9DFE9B2539672900ECA93A /* Assets.xcassets */; };
@@ -24,10 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B00787B253B0C3E002049E5 /* albumData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumData.swift; sourceTree = "<group>"; };
+		3B00787F253B0CFE002049E5 /* memberData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberData.swift; sourceTree = "<group>"; };
 		3B4A504B253994CB0068BF15 /* memberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberRow.swift; sourceTree = "<group>"; };
 		3B4A5053253995060068BF15 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		3B4A505725399D5D0068BF15 /* memberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberView.swift; sourceTree = "<group>"; };
 		3B4A505B2539A2660068BF15 /* memberDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberDetail.swift; sourceTree = "<group>"; };
+		3B824F4E253AC1D300C36F0A /* photoWallsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoWallsView.swift; sourceTree = "<group>"; };
 		3B9DFE942539672700ECA93A /* 147ebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 147ebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9DFE972539672700ECA93A /* _47ebookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _47ebookApp.swift; sourceTree = "<group>"; };
 		3B9DFE992539672700ECA93A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,11 +85,14 @@
 				3B9DFE972539672700ECA93A /* _47ebookApp.swift */,
 				3B9DFE992539672700ECA93A /* ContentView.swift */,
 				3B4A5053253995060068BF15 /* Member.swift */,
+				3B00787F253B0CFE002049E5 /* memberData.swift */,
 				3B4A505B2539A2660068BF15 /* memberDetail.swift */,
 				3B4A504B253994CB0068BF15 /* memberRow.swift */,
 				3B4A505725399D5D0068BF15 /* memberView.swift */,
+				3B824F4E253AC1D300C36F0A /* photoWallsView.swift */,
 				3B9DFE9B2539672900ECA93A /* Assets.xcassets */,
 				3B9DFEA02539672900ECA93A /* Persistence.swift */,
+				3B00787B253B0C3E002049E5 /* albumData.swift */,
 				3B9DFEA52539672900ECA93A /* Info.plist */,
 				3B9DFEA22539672900ECA93A /* _47ebook.xcdatamodeld */,
 				3B9DFE9D2539672900ECA93A /* Preview Content */,
@@ -170,6 +179,9 @@
 			files = (
 				3B9DFECD2539855B00ECA93A /* albumDetail.swift in Sources */,
 				3B9DFEA12539672900ECA93A /* Persistence.swift in Sources */,
+				3B007880253B0CFE002049E5 /* memberData.swift in Sources */,
+				3B824F4F253AC1D300C36F0A /* photoWallsView.swift in Sources */,
+				3B00787C253B0C3E002049E5 /* albumData.swift in Sources */,
 				3B9DFEC425396DF400ECA93A /* albumList.swift in Sources */,
 				3B9DFE9A2539672700ECA93A /* ContentView.swift in Sources */,
 				3B4A505C2539A2660068BF15 /* memberDetail.swift in Sources */,

@@ -11,26 +11,47 @@ struct albumDetail: View {
     let album: Album
     var body: some View {
         VStack{
+            
             Image(album.name)
                 .resizable()
                 .scaleEffect()
                 .frame(width:300,height: 300)
                 .clipped()
+                .padding()
+            
+            
             ScrollView {
                 VStack {
                     Text(album.detail)
                         .lineLimit(nil)
-                        .background(Color.white)
-                        .frame(width:230)
+                        .foregroundColor(.black)
+                        .frame(width:4*UIScreen.main.bounds.width/5)
+                        .lineSpacing(15)
+                        .cornerRadius(20)
+                        .font(.system(size: 28))
+
                     }
+                Spacer()
             }
+            .padding()
             
-        }.navigationTitle(album.name)
+
+            
+        }
+        .offset(y: 50)
+        .padding()
+        .lineLimit(nil)
+        .navigationBarTitle(album.name, displayMode: .inline)
+        .frame(width: UIScreen.main.bounds.width)
+        .background(LinearGradient(gradient: Gradient(colors: [Color.white,Color(red: 255/255, green: 241/255, blue: 208/255)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+        
+        
+    
     }
 }
 
 struct albumDetail_Previews: PreviewProvider {
     static var previews: some View {
-        albumDetail(album: Album(name:"Identify",time:"2014/11/18",detail:"在連伸手都害怕的漆黑之中,被困其中的不完整存在。還有從哪裡傳來的聲音。呼喚被困於黑暗之中我名字的你的聲音，是一束光，成為存在的理由。在困倦疲憊，向下沉淪的瞬間，也因為有了粉絲呼喚他們的名字，所以GOT7才得以飛翔。OT7通過新專輯《Call My Name》表達了對粉絲的感謝，以及埋藏在心底的珍貴情感。\"希望這張專輯能完整地進行詮釋，並傳遞到大家的耳中與心中\",\"謝謝你們成為GOT7的理由。我們也要成為粉絲們的理由\",\"想讓粉絲們充滿幸福的回憶與情感，想成為讓人驕傲的GOT7\"等，將這樣的心情傾注於專輯。"))
+        albumDetail(album: Album(name:"Got it?",time:"2014/01/20",detail:"1. Hello（여보세요)\n2. Girls Girls Girls\n3. I Like You(난 니가 좋아)\n4. Follow Me(따라와)\n5. Like Oh\n6. Playground"))
     }
 }

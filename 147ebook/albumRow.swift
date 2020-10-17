@@ -19,11 +19,17 @@ struct albumRow: View {
                 .clipped()
             VStack(alignment: .leading){
                 Text(album.name)
+                    .foregroundColor(.black)
                 Text(album.time)
+                    .foregroundColor(.black)
             }
             Spacer()
         }
+        
+        .background(LinearGradient(gradient: Gradient(colors: [Color.white,Color(red: 252/255  , green: 213/255, blue: 206/255)]), startPoint: .leading, endPoint: .trailing))
+        .cornerRadius(20)
     }
+    
 }
 
 

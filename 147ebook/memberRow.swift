@@ -14,20 +14,21 @@ struct memberRow: View {
             Image(member.picture)
                 .resizable()
                 .scaleEffect()
-                .frame(width:400,height: 300)
+                .frame(width:4*UIScreen.main.bounds.width/5,height:2.5*UIScreen.main.bounds.width/5)
                 .cornerRadius(30)
                 .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 3))
             Text(member.name)
-                .padding(.trailing,-150)
-                .padding(.top,260)
+                .offset(x: UIScreen.main.bounds.width/9, y:UIScreen.main.bounds.width/5)
                 .foregroundColor(.white)
                 .font(.system(size: 15, weight: .heavy, design: .serif))
                 
             
             Spacer()
-        }
+            
+        }.background(Color(red: 255/255, green: 243/255, blue: 176/255))
     }
 }
+    
 
 struct memberRow_Previews: PreviewProvider {
     static var previews: some View {
