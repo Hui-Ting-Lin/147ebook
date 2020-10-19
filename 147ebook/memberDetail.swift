@@ -16,7 +16,6 @@ struct memberDetail: View {
                     .scaledToFill()
                     .frame(width:4*UIScreen.main.bounds.width/5,height:2.5*UIScreen.main.bounds.width/5)
                     .clipped()
-                    .padding()
                 
                 ScrollView {
                     VStack(alignment: .leading)
@@ -40,6 +39,7 @@ struct memberDetail: View {
                         HStack{
                             Text("Instagram：")
                                 .padding()
+                                .foregroundColor(.black)
                             Link(member.igname, destination: URL(string: member.instagram)!)
                         }
                             
@@ -48,20 +48,20 @@ struct memberDetail: View {
                     .padding()
                     .lineLimit(nil)
                     .cornerRadius(20)
-                    .frame(width:4*UIScreen.main.bounds.width/5)
+                    
                     
                     
                 }
-                
+                .frame(width:4*UIScreen.main.bounds.width/5, height:UIScreen.main.bounds.height/1.8)
             }
-        .offset(y: 50)
+        .offset(y: 40)
         .frame(minWidth: 0,
         maxWidth: .infinity,
         minHeight: 0,
         maxHeight: .infinity,
         alignment: .center)
         .navigationBarTitle(member.nickname,displayMode: .inline)
-            .background(LinearGradient(gradient: Gradient(colors: [Color.white, Color(red: 255/255, green: 227/255, blue: 224/255)]), startPoint: .topLeading, endPoint: .bottomTrailing))
+            .background(LinearGradient(gradient: Gradient(colors: [Color(red: 253/255, green: 252/255, blue: 220/255),Color(red: 255/255, green: 202/255, blue: 212/255)]), startPoint: .topLeading, endPoint: .bottomTrailing))
         
         
     }

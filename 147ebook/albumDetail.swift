@@ -9,42 +9,82 @@ import SwiftUI
 
 struct albumDetail: View {
     let album: Album
+    
+    @State private var rotateDegree: Double = 0
     var body: some View {
-        VStack{
+        ZStack{
+            VStack{
             
-            Image(album.name)
-                .resizable()
-                .scaleEffect()
-                .frame(width:300,height: 300)
-                .clipped()
+                Image(album.name)
+                    .resizable()
+                    .scaleEffect()
+                    .frame(width:300,height: 300)
+                    .clipped()
+                    .padding()
+                
+                
+                ScrollView {
+                    VStack {
+                        ForEach(0..<album.song.count){(index) in
+                            HStack{
+                                Image(systemName: "music.note")
+                                    .foregroundColor(.black)
+                                Text(album.song[index])
+                                    .lineLimit(nil)
+                                    .foregroundColor(.black)
+                                    .lineSpacing(15)
+                                    .cornerRadius(20)
+                                    .frame(height:50)
+                                    
+                                }
+                                .font(.system(size: 23))
+                            .frame(width: 4*UIScreen.main.bounds.width/5, alignment: .leading)
+                            }
+                                
+
+                        }
+                    Spacer()
+                }
                 .padding()
-            
-            
-            ScrollView {
-                VStack {
-                    Text(album.detail)
-                        .lineLimit(nil)
-                        .foregroundColor(.black)
-                        .frame(width:4*UIScreen.main.bounds.width/5)
-                        .lineSpacing(15)
-                        .cornerRadius(20)
-                        .font(.system(size: 28))
+                
 
-                    }
-                Spacer()
+                
             }
+            .offset(y: 50)
             .padding()
+            .lineLimit(nil)
+            .navigationBarTitle(album.name, displayMode: .inline)
+            .frame(width: UIScreen.main.bounds.width)
+            .background(LinearGradient(gradient: Gradient(colors: [Color(red: 255/255, green: 241/255, blue: 208/255),Color(red: 255/255, green: 181/255, blue: 206/255)]), startPoint: .topLeading, endPoint: .bottomTrailing))
             
-
             
+            Image("bird1")
+                .resizable()
+                .frame(width:UIScreen.main.bounds.width*1/4, height:UIScreen.main.bounds.width*1/4)
+                .transition(.slide)
+                .rotationEffect(.degrees(rotateDegree))
+                .animation(Animation.linear(duration:0.5)
+                        .repeatForever(autoreverses:true)
+                )
+                .onAppear{
+                    rotateDegree = 30
+                }
+                .position(x:UIScreen.main.bounds.width*4/5,y:UIScreen.main.bounds.height*4.2/5)
+            
+            
+            /*Image("mirroBird")
+                .resizable()
+                .frame(width:UIScreen.main.bounds.width*1.2/4, height:UIScreen.main.bounds.width*0.8/4)
+                .transition(.slide)
+                .rotationEffect(.degrees(rotateDegree))
+                .animation(Animation.linear(duration:0.5)
+                        .repeatForever(autoreverses:true)
+                )
+                .onAppear{
+                    rotateDegree = 30
+                }
+                .position(x:UIScreen.main.bounds.width/5,y:UIScreen.main.bounds.height*4/5)*/
         }
-        .offset(y: 50)
-        .padding()
-        .lineLimit(nil)
-        .navigationBarTitle(album.name, displayMode: .inline)
-        .frame(width: UIScreen.main.bounds.width)
-        .background(LinearGradient(gradient: Gradient(colors: [Color.white,Color(red: 255/255, green: 241/255, blue: 208/255)]), startPoint: .topLeading, endPoint: .bottomTrailing))
-        
         
     
     }
@@ -52,6 +92,6 @@ struct albumDetail: View {
 
 struct albumDetail_Previews: PreviewProvider {
     static var previews: some View {
-        albumDetail(album: Album(name:"Got it?",time:"2014/01/20",detail:"1. Hello（여보세요)\n2. Girls Girls Girls\n3. I Like You(난 니가 좋아)\n4. Follow Me(따라와)\n5. Like Oh\n6. Playground"))
+        albumDetail(album: Album(name:"Got it?",time:"2014/01/20",song:["Hello","Girls Girls Girls","I Like You","Follow Me","Like Oh","Playground"]))
     }
 }

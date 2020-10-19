@@ -9,6 +9,6 @@ import Foundation
 struct Album{
     let name: String
     let time: String
-    let detail: String
+    let song: [String]
     
 }

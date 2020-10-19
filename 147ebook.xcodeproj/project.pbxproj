@@ -24,6 +24,9 @@
 		3B9DFEC425396DF400ECA93A /* albumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DFEC325396DF400ECA93A /* albumList.swift */; };
 		3B9DFEC9253976DB00ECA93A /* Abum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DFEC8253976DB00ECA93A /* Abum.swift */; };
 		3B9DFECD2539855B00ECA93A /* albumDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9DFECC2539855B00ECA93A /* albumDetail.swift */; };
+		3BF92F05253D7F2C00017BED /* selfieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF92F04253D7F2C00017BED /* selfieData.swift */; };
+		3BF92F10253D87F600017BED /* SelfiePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF92F0F253D87F600017BED /* SelfiePage.swift */; };
+		3BF92F15253D8EF200017BED /* SelfieItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF92F14253D8EF200017BED /* SelfieItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		3B9DFEC325396DF400ECA93A /* albumList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumList.swift; sourceTree = "<group>"; };
 		3B9DFEC8253976DB00ECA93A /* Abum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abum.swift; sourceTree = "<group>"; };
 		3B9DFECC2539855B00ECA93A /* albumDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = albumDetail.swift; sourceTree = "<group>"; };
+		3BF92F04253D7F2C00017BED /* selfieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selfieData.swift; sourceTree = "<group>"; };
+		3BF92F0F253D87F600017BED /* SelfiePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfiePage.swift; sourceTree = "<group>"; };
+		3BF92F14253D8EF200017BED /* SelfieItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,11 +96,14 @@
 				3B4A504B253994CB0068BF15 /* memberRow.swift */,
 				3B4A505725399D5D0068BF15 /* memberView.swift */,
 				3B824F4E253AC1D300C36F0A /* photoWallsView.swift */,
-				3B9DFE9B2539672900ECA93A /* Assets.xcassets */,
 				3B9DFEA02539672900ECA93A /* Persistence.swift */,
 				3B00787B253B0C3E002049E5 /* albumData.swift */,
-				3B9DFEA52539672900ECA93A /* Info.plist */,
+				3BF92F0F253D87F600017BED /* SelfiePage.swift */,
+				3BF92F04253D7F2C00017BED /* selfieData.swift */,
+				3BF92F14253D8EF200017BED /* SelfieItem.swift */,
 				3B9DFEA22539672900ECA93A /* _47ebook.xcdatamodeld */,
+				3B9DFEA52539672900ECA93A /* Info.plist */,
+				3B9DFE9B2539672900ECA93A /* Assets.xcassets */,
 				3B9DFE9D2539672900ECA93A /* Preview Content */,
 			);
 			path = 147ebook;
@@ -190,8 +199,11 @@
 				3B9DFEC9253976DB00ECA93A /* Abum.swift in Sources */,
 				3B4A504C253994CB0068BF15 /* memberRow.swift in Sources */,
 				3B9DFEA42539672900ECA93A /* _47ebook.xcdatamodeld in Sources */,
+				3BF92F10253D87F600017BED /* SelfiePage.swift in Sources */,
+				3BF92F05253D7F2C00017BED /* selfieData.swift in Sources */,
 				3B4A505825399D5D0068BF15 /* memberView.swift in Sources */,
 				3B4A5054253995060068BF15 /* Member.swift in Sources */,
+				3BF92F15253D8EF200017BED /* SelfieItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +333,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"147ebook/Preview Content\"";
+				DEVELOPMENT_TEAM = CQCPP83MT6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = 147ebook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -342,6 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"147ebook/Preview Content\"";
+				DEVELOPMENT_TEAM = CQCPP83MT6;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = 147ebook/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

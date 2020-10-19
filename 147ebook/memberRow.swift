@@ -18,7 +18,7 @@ struct memberRow: View {
                 .cornerRadius(30)
                 .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 3))
             Text(member.name)
-                .offset(x: UIScreen.main.bounds.width/9, y:UIScreen.main.bounds.width/5)
+                .offset(x: UIScreen.main.bounds.width/10, y:UIScreen.main.bounds.width/5)
                 .foregroundColor(.white)
                 .font(.system(size: 15, weight: .heavy, design: .serif))
                 

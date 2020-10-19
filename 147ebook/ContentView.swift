@@ -27,7 +27,7 @@ struct ContentView: View {
                 }
         }
         .accentColor(.green)
-        .tabViewStyle(PageTabViewStyle())
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
    
 }

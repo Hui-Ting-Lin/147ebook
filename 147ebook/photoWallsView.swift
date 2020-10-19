@@ -10,42 +10,62 @@ import SwiftUI
 struct photoWallsView: View {
     var body: some View {
         NavigationView{
-            ScrollView(.vertical){
-                let colums=[GridItem(.adaptive(minimum: 150))]
+            VStack{
+                ScrollView(.horizontal){
+                    let rows = [GridItem()]
+                    LazyHGrid(rows: rows){
+                        ForEach(0..<7){(index) in
+                            NavigationLink(
+                                destination:
+                                    SelfiePage(nameNum: index)
+                            )
+                            {
+                                SelfieItem(selfieName:nameList[index])
+                            }
+                        }
+                    }
+                    .frame(height:150)
+                    .offset(x: 5)
+                }
                 
-                LazyVGrid(columns: colums){
-                    ForEach(1..<344){item in
-                        NavigationLink(
-                            destination: Image(String(item))
-                                .resizable()
-                                .scaledToFit()
-                                .background(Color(red: 255/255, green: 227/255, blue: 224/255))
-                        ){
-                            VStack{
-                                Image(String(item))
+                .frame(height:150)
+                //.background(Color(red: 255/255, green: 227/255, blue: 224/255))
+               ScrollView(.vertical){
+                    let colums=[GridItem(.adaptive(minimum: 150))]
+                    
+                    LazyVGrid(columns: colums){
+                        ForEach(1..<345){item in
+                            NavigationLink(
+                                destination: Image(String(item))
                                     .resizable()
-                                    .scaleEffect()
-                                    .frame(height:150)
-                                    .clipped()
-                            
+                                    .scaledToFit()
+                                    //.background(Color(red: 255/255, green: 227/255, blue: 224/255))
+                            ){
+                                VStack{
+                                    Image("little"+String(item))
+                                        .resizable()
+                                        .scaleEffect()
+                                        .frame(height:150)
+                                        .clipped()
+                                
+                                }
+                                
                             }
                             
                         }
-                        
                     }
-                }
+                    
+               }
+               .padding()
+                //.background(Color(red: 255/255, green: 227/255, blue: 224/255))
+                .navigationBarTitle("Photo Wall",displayMode: .inline)
                 
             }
-            .background(Color(red: 255/255, green: 227/255, blue: 224/255,opacity:0.7))
-            .navigationBarTitle("Photo Wall",displayMode: .inline)
-            .offset(y: 50)
-            
         }
         
-        .padding()
-        .background(Color(red: 255/255, green: 227/255, blue: 224/255,opacity:0.7))
+        //.padding()
+        //.background(Color(red: 255/255, green: 227/255, blue: 224/255,opacity:0.7))
         .navigationViewStyle(StackNavigationViewStyle())
-        
     }
 }
 

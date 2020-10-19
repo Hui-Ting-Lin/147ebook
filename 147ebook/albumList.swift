@@ -9,18 +9,9 @@ import SwiftUI
 
 struct albumList: View {
     var body: some View {
-        /*NavigationView{
-            ScrollView(.horizontal){
-                let rows = [GridItem()]
-                LazyHGrid(rows:rows){
-                    ForEach
-                }
-            }
-            
-            
-        }*/
-
         NavigationView{
+            VStack{
+                
             List{
                 Section(header:
                             CustomHeader(
@@ -46,8 +37,8 @@ struct albumList: View {
                         }
                             
                     }
-                    //albumRow(album:).previewLayout(.fixed(width: 300, height: 70))
                 }
+            }
             }
         }
         
@@ -64,6 +55,7 @@ struct CustomHeader: View {
             Spacer()
             HStack {
                 Text(name)
+                    .foregroundColor(.black)
                 Spacer()
             }
             Spacer()
@@ -71,6 +63,7 @@ struct CustomHeader: View {
         
         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
         .background(color)
+        
     }
 }
 

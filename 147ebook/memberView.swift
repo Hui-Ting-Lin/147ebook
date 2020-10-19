@@ -24,7 +24,6 @@ struct memberView: View {
                     
                 }
             }
-            .offset(y: 50)
             .scaleEffect()
             .background(Color(red: 255/255, green: 243/255, blue: 176/255))
             .frame(minWidth: 0,

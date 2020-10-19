@@ -36,7 +36,7 @@ struct albumRow: View {
 
 struct albumRow_Previews: PreviewProvider {
     static var previews: some View {
-        albumRow(album: Album(name:"Got it?",time:"2014/01/20",detail:""))
+        albumRow(album: Album(name:"Got it?",time:"2014/01/20",song:["Hello（여보세요)","Girls Girls Girls","I Like You(난 니가 좋아)","Follow Me(따라와)","Like Oh","Playground"]))
             .previewLayout(.fixed(width: 300, height: 70))
     }
 }
