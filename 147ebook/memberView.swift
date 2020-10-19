@@ -33,7 +33,6 @@ struct memberView: View {
             alignment: .center)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        
     }
 }
 

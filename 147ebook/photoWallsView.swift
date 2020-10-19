@@ -39,7 +39,7 @@ struct photoWallsView: View {
                                 destination: Image(String(item))
                                     .resizable()
                                     .scaledToFit()
-                                    //.background(Color(red: 255/255, green: 227/255, blue: 224/255))
+                                
                             ){
                                 VStack{
                                     Image("little"+String(item))
