@@ -57,8 +57,7 @@ struct photoWallsView: View {
                     
                }
                .padding()
-                //.background(Color(red: 255/255, green: 227/255, blue: 224/255))
-                .navigationBarTitle("Photo Wall",displayMode: .inline)
+               .navigationBarTitle("Photo Wall",displayMode: .inline)
                 
             }
         }

@@ -24,7 +24,6 @@ struct SelfieItem: View {
                 .offset(y:-5 )
         }
         .offset(y:15 )
-        //.background(Color(red: 255/255, green: 227/255, blue: 224/255))
             
         
     }

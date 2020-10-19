@@ -71,19 +71,7 @@ struct albumDetail: View {
                 }
                 .position(x:UIScreen.main.bounds.width*4/5,y:UIScreen.main.bounds.height*4.2/5)
             
-            
-            /*Image("mirroBird")
-                .resizable()
-                .frame(width:UIScreen.main.bounds.width*1.2/4, height:UIScreen.main.bounds.width*0.8/4)
-                .transition(.slide)
-                .rotationEffect(.degrees(rotateDegree))
-                .animation(Animation.linear(duration:0.5)
-                        .repeatForever(autoreverses:true)
-                )
-                .onAppear{
-                    rotateDegree = 30
-                }
-                .position(x:UIScreen.main.bounds.width/5,y:UIScreen.main.bounds.height*4/5)*/
+        
         }
         
     
